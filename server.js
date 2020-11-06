@@ -16,6 +16,13 @@ connection.connect((err) => {
     console.log('The server is connected and running');
 });
 
+// performing queries
+// GETTING DATA
+connection.query('SELECT * FROM users', (err, data) => {
+    console.log('Data received');
+    console.log(data);
+})
+
 app.listen(3000, () => {
     console.log('Connected');
 });
